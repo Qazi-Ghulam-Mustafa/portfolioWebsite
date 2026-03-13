@@ -345,6 +345,7 @@ section.active {
 
 .resume-box .description {
     margin: 2rem 0 2.5rem;
+    font-size: 1.8rem;
 }
 
 .resume-box .resume-btn {
@@ -369,6 +370,10 @@ section.active {
     display: none;
 }
 
+.resume-detail p {
+    font-size: 1.8rem;
+}
+
 .resume-detail.active {
     display: block;
 }
@@ -380,10 +385,24 @@ section.active {
 
 .resume-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit) minmax(30rem, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
     margin: 20px;
     gap: 2rem;
-    width: 80%;
+    height: 45rem;
+    overflow: auto;
+}
+
+.resume-list::-webkit-scrollbar {
+    width: .7rem;
+}
+
+.resume-list::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 1rem;
+}
+
+.resume-list:hover::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
 }
 
 .resume-list .resume-item {
@@ -393,7 +412,7 @@ section.active {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .resume-item .year {
@@ -410,17 +429,23 @@ section.active {
     margin-bottom: 2rem;
     font-size: 2rem;
 }
+.resume-item .des-p{
+    font-size: 2.3rem;
+    color:var(--main-color);
+}
 
 .resume-item .company::before {
     content: '';
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
     padding: .5rem;
     background-color: var(--main-color);
     border-radius: 50%;
     margin-left: -2rem;
 }
+
+
 
 .resume-item ul {
     margin-left: 2rem;
