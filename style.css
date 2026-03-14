@@ -371,9 +371,15 @@ section.active {
 }
 
 .resume-detail p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
-
+#education-para{
+    font-size: 1.4rem;
+}
+.icon2{
+    margin-top:20px;
+    font-size:3rem
+}
 .resume-detail.active {
     display: block;
 }
