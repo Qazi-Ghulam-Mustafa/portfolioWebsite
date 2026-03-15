@@ -344,8 +344,8 @@ section.active {
 }
 
 .resume-box .description {
-    margin: 2rem 0 2.5rem;
-    font-size: 1.8rem;
+    margin: 1.6rem 0 2rem;
+    font-size: 1.6rem;
 }
 
 .resume-box .resume-btn {
@@ -470,7 +470,7 @@ section.active {
     font-size: 1.6rem;
 }
 
-.resume-detail .skills .resume-list {
+.resume-detail.skills .resume-list {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 2fr));
     height: auto;
     overflow: visible;
@@ -502,9 +502,69 @@ section.active {
     pointer-events: none;
     opacity: 0;
     transform: scale(.9);
+    transition: .2rem;
 }
-.resume-detail.skills .resume-item:hover span{
+
+.resume-detail.skills .resume-item:hover span {
     top: -25%;
     opacity: 1;
     transform: scale(1);
+}
+
+.resume-detail.aboutme .resume-list {
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+}
+
+.resume-detail.aboutme .resume-item {
+    height: auto;
+    padding: 0 0 .5rem;
+    background: transparent;
+}
+
+.resume-detail.aboutme .resume-item p {
+    color: var(--main-color);
+}
+
+.resume-detail.aboutme .resume-item p span {
+    color: var(--white-color);
+    margin-left: 1rem;
+    font-size: 1.8rem;
+
+}
+
+.resume-detail.aboutme .resume-item p a {
+    color: white;
+    margin-left: 10px;
+    font-size: 2.5rem;
+}
+
+
+
+.resume-detail.aboutme .resume-item p a:active {
+    color: white;
+}
+
+.porfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.portfolio-detail {
+    display: none;
+}
+
+.portfolio-detail.active{
+    display: block;
+}
+
+.portfolio-box .number {
+    font-size: 8rem;
+    -webkit-text-stroke: .07rem var(--white-color);
+    color: transparent;
+    line-height: 1;
+}
+.portfolio-box h3{
+    
 }
